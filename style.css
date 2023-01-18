@@ -105,6 +105,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 li {
@@ -119,7 +120,7 @@ li {
   letter-spacing: 0.1em;
   text-align: center;
   font-size: 0.813rem;
-  max-width: 300px;
+  max-width: 400px;
   transition: 0.2s;
 }
 .button:hover {
@@ -201,7 +202,7 @@ body header .menu-mobile {
   }
   body header .mobile .menu .button-close {
     background-color: #fbcc0b;
-    display: flex;
+    display: none;
     align-items: center;
     gap: 8px;
     padding: 16px;
@@ -221,7 +222,7 @@ body header .menu-mobile {
     z-index: 98;
     opacity: 0;
     transform: translateY(-100%);
-    background-color: #FEF5CE;
+    background-color: #fef5ce;
     transition: 0.3s;
     padding-top: 7rem;
     padding-left: 24px;
@@ -360,6 +361,7 @@ body header .menu-mobile {
 @media only screen and (min-width: 992px) and (min-width: 1200px) {
   body header .laptop .nav-bar .menu-primary {
     gap: 42px;
+    font-size: 0.85rem;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -371,12 +373,24 @@ body header .menu-mobile {
     font-size: 0.813rem;
     gap: 20px;
   }
+}
+@media only screen and (min-width: 992px) and (min-width: 1200px) {
+  body header .laptop .menu-secondary {
+    gap: 42px;
+    font-size: 0.833rem;
+  }
+}
+@media only screen and (min-width: 992px) {
   body header .laptop .menu-secondary .contact {
     background-color: #fbcc0b;
   }
+}
+@media only screen and (min-width: 992px) {
   body header .laptop .menu-secondary .separation {
     width: 3px;
   }
+}
+@media only screen and (min-width: 992px) {
   body header .laptop .menu-secondary .select .option {
     font-size: 0.875rem;
   }
@@ -566,17 +580,25 @@ body main .hero .scroll-down {
     display: flex;
   }
 }
-body main .about {
+body main .container-about-advantages {
+  position: relative;
+  width: 100%;
+}
+body main .container-about-advantages .about {
   display: flex;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
 }
 @media only screen and (max-width: 769px) {
-  body main .about {
+  body main .container-about-advantages .about {
     flex-direction: column;
     margin-bottom: 66px;
+    position: relative;
   }
 }
 @media only screen and (min-width: 770px) and (max-width: 1124px) {
-  body main .about {
+  body main .container-about-advantages .about {
     flex-direction: row;
     margin-right: 92px;
     gap: 42px;
@@ -584,28 +606,28 @@ body main .about {
   }
 }
 @media only screen and (min-width: 1125px) {
-  body main .about {
+  body main .container-about-advantages .about {
     flex-direction: row;
     margin-right: 92px;
     gap: 102px;
   }
 }
-body main .about .container-about-image-mobile {
+body main .container-about-advantages .about .container-about-image-mobile {
   display: none;
   margin-bottom: 87px;
 }
 @media only screen and (max-width: 768px) {
-  body main .about .container-about-image-mobile {
+  body main .container-about-advantages .about .container-about-image-mobile {
     display: flex;
   }
 }
 @media only screen and (max-width: 768px) {
-  body main .about .container-about-image-laptop {
+  body main .container-about-advantages .about .container-about-image-laptop {
     display: none;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1124px) {
-  body main .about .container-about-image-laptop {
+  body main .container-about-advantages .about .container-about-image-laptop {
     display: flex;
     position: relative;
     min-width: 494px;
@@ -616,52 +638,56 @@ body main .about .container-about-image-mobile {
   }
 }
 @media only screen and (min-width: 1125px) {
-  body main .about .container-about-image-laptop {
+  body main .container-about-advantages .about .container-about-image-laptop {
     display: flex;
     position: relative;
     top: 50px;
     max-width: 594px;
   }
 }
-body main .about .content-about {
+body main .container-about-advantages .about .content-about {
   display: flex;
   flex-direction: column;
   align-items: start;
   position: relative;
 }
 @media only screen and (max-width: 769px) {
-  body main .about .content-about {
+  body main .container-about-advantages .about .content-about {
     padding: 0px 24px;
     position: relative;
   }
 }
 @media only screen and (min-width: 770px) and (max-width: 1100px) {
-  body main .about .content-about {
+  body main .container-about-advantages .about .content-about {
     flex: 45%;
+    margin-right: 30px;
   }
 }
 @media only screen and (min-width: 1101px) and (max-width: 1200px) {
-  body main .about .content-about {
+  body main .container-about-advantages .about .content-about {
     max-width: 400px;
+    margin-right: 30px;
   }
 }
 @media only screen and (min-width: 1201px) and (max-width: 1440px) {
-  body main .about .content-about {
+  body main .container-about-advantages .about .content-about {
     max-width: 500px;
+    margin-right: 30px;
   }
 }
 @media only screen and (min-width: 1441px) {
-  body main .about .content-about {
+  body main .container-about-advantages .about .content-about {
     max-width: 800px;
+    margin-right: 30px;
   }
 }
-body main .about .content-about .container-decoration-text {
+body main .container-about-advantages .about .content-about .container-decoration-text {
   width: 21px;
   height: 26px;
   position: absolute;
 }
 @media only screen and (max-width: 769px) {
-  body main .about .content-about .container-decoration-text {
+  body main .container-about-advantages .about .content-about .container-decoration-text {
     width: 21px;
     height: 26px;
     position: absolute;
@@ -670,7 +696,7 @@ body main .about .content-about .container-decoration-text {
   }
 }
 @media only screen and (min-width: 770px) {
-  body main .about .content-about .container-decoration-text {
+  body main .container-about-advantages .about .content-about .container-decoration-text {
     width: 51px;
     height: 62px;
     position: absolute;
@@ -678,140 +704,149 @@ body main .about .content-about .container-decoration-text {
     left: -29px;
   }
 }
-body main .about .content-about .about-title {
+body main .container-about-advantages .about .content-about .about-title {
   font-weight: 900;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 0.05em;
 }
 @media only screen and (max-width: 769px) {
-  body main .about .content-about .about-title {
+  body main .container-about-advantages .about .content-about .about-title {
     font-size: 0.938rem;
     margin-bottom: 16px;
   }
 }
 @media only screen and (min-width: 770px) and (max-width: 1200px) {
-  body main .about .content-about .about-title {
+  body main .container-about-advantages .about .content-about .about-title {
     font-size: 1.125rem;
     margin-bottom: 45px;
   }
 }
 @media only screen and (min-width: 1201px) {
-  body main .about .content-about .about-title {
+  body main .container-about-advantages .about .content-about .about-title {
     font-size: 1.313rem;
     margin-bottom: 45px;
   }
 }
-body main .about .content-about .about-subtitle {
+body main .container-about-advantages .about .content-about .about-subtitle {
   font-family: "Open Sans", sans-serif;
   color: #463a2f;
   font-weight: 600;
   line-height: 162%;
 }
 @media only screen and (max-width: 769px) {
-  body main .about .content-about .about-subtitle {
+  body main .container-about-advantages .about .content-about .about-subtitle {
     font-size: 1.375rem;
   }
 }
 @media only screen and (min-width: 770px) and (max-width: 1200px) {
-  body main .about .content-about .about-subtitle {
+  body main .container-about-advantages .about .content-about .about-subtitle {
     font-size: 1.625rem;
   }
 }
 @media only screen and (min-width: 1201px) {
-  body main .about .content-about .about-subtitle {
+  body main .container-about-advantages .about .content-about .about-subtitle {
     font-size: 2.125rem;
   }
 }
-body main .about .content-about .about-cta {
+body main .container-about-advantages .about .content-about .about-cta {
   color: #463a2f;
   background-color: #fbcc0b;
 }
-body main .advantages {
+body main .container-about-advantages .advantages {
   display: flex;
   justify-content: center;
   background-color: #2d2d2d;
   font-family: "Open Sans", sans-serif;
   flex-direction: column;
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  overflow: hidden;
 }
 @media only screen and (max-width: 769px) {
-  body main .advantages {
+  body main .container-about-advantages .advantages {
     padding: 60px 24px;
+    position: relative;
+    margin-top: 0;
   }
 }
 @media only screen and (min-width: 770px) and (max-width: 1024px) {
-  body main .advantages {
+  body main .container-about-advantages .advantages {
     height: 865px;
+    margin-top: 600px;
   }
 }
 @media only screen and (min-width: 1025px) {
-  body main .advantages {
+  body main .container-about-advantages .advantages {
     height: 100vh;
     padding-top: 60px;
+    margin-top: 700px;
   }
 }
-body main .advantages .content {
+body main .container-about-advantages .advantages .content {
   display: flex;
   align-items: center;
+  z-index: 3;
 }
 @media only screen and (max-width: 768px) {
-  body main .advantages .content {
+  body main .container-about-advantages .advantages .content {
     gap: 68px;
     flex-direction: column;
   }
 }
 @media only screen and (min-width: 769px) {
-  body main .advantages .content {
+  body main .container-about-advantages .advantages .content {
     padding: 0px 52px;
     gap: 64px;
   }
 }
-body main .advantages .content .content-slide {
+body main .container-about-advantages .advantages .content .content-slide {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 @media only screen and (max-width: 769px) {
-  body main .advantages .content .content-slide {
+  body main .container-about-advantages .advantages .content .content-slide {
     align-items: center;
   }
 }
 @media only screen and (min-width: 770px) {
-  body main .advantages .content .content-slide {
+  body main .container-about-advantages .advantages .content .content-slide {
     padding-left: 90px;
   }
 }
-body main .advantages .content .content-slide .content-title {
+body main .container-about-advantages .advantages .content .content-slide .content-title {
   font-weight: 600;
 }
 @media only screen and (max-width: 769px) {
-  body main .advantages .content .content-slide .content-title {
+  body main .container-about-advantages .advantages .content .content-slide .content-title {
     font-size: 1.375rem;
     line-height: 159%;
     text-align: center;
   }
 }
 @media only screen and (min-width: 770px) and (max-width: 1024px) {
-  body main .advantages .content .content-slide .content-title {
+  body main .container-about-advantages .advantages .content .content-slide .content-title {
     font-size: 1.625rem;
     line-height: 162%;
   }
 }
 @media only screen and (min-width: 1025px) {
-  body main .advantages .content .content-slide .content-title {
+  body main .container-about-advantages .advantages .content .content-slide .content-title {
     font-size: 1.875rem;
   }
 }
-body main .advantages .content .content-slide .container-slider {
+body main .container-about-advantages .advantages .content .content-slide .container-slider {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media only screen and (min-width: 769px) {
-  body main .advantages .content .content-slide .container-slider {
+  body main .container-about-advantages .advantages .content .content-slide .container-slider {
     align-items: flex-start;
   }
 }
-body main .advantages .content .content-slide .container-slider .slider {
+body main .container-about-advantages .advantages .content .content-slide .container-slider .slider {
   border: 0.5px solid #ffffff;
   border-radius: 12px;
   min-width: 222px;
@@ -821,7 +856,7 @@ body main .advantages .content .content-slide .container-slider .slider {
   justify-content: center;
 }
 @media only screen and (max-width: 769px) {
-  body main .advantages .content .content-slide .container-slider .slider {
+  body main .container-about-advantages .advantages .content .content-slide .container-slider .slider {
     padding: 80px 36px 63px 36px;
     margin-left: 26px;
     margin-right: 26px;
@@ -829,7 +864,7 @@ body main .advantages .content .content-slide .container-slider .slider {
   }
 }
 @media only screen and (min-width: 770px) and (max-width: 1024px) {
-  body main .advantages .content .content-slide .container-slider .slider {
+  body main .container-about-advantages .advantages .content .content-slide .container-slider .slider {
     width: 320px;
     height: 254px;
     display: flex;
@@ -838,7 +873,7 @@ body main .advantages .content .content-slide .container-slider .slider {
   }
 }
 @media only screen and (min-width: 1025px) {
-  body main .advantages .content .content-slide .container-slider .slider {
+  body main .container-about-advantages .advantages .content .content-slide .container-slider .slider {
     width: 400px;
     height: 250px;
     display: flex;
@@ -846,21 +881,21 @@ body main .advantages .content .content-slide .container-slider .slider {
     padding: 30px;
   }
 }
-body main .advantages .content .content-slide .container-slider .slider .slider-item-text {
+body main .container-about-advantages .advantages .content .content-slide .container-slider .slider .slider-item-text {
   font-weight: 500;
   line-height: 133%;
 }
 @media only screen and (max-width: 769px) {
-  body main .advantages .content .content-slide .container-slider .slider .slider-item-text {
+  body main .container-about-advantages .advantages .content .content-slide .container-slider .slider .slider-item-text {
     font-size: 1.125rem;
   }
 }
 @media only screen and (min-width: 770px) {
-  body main .advantages .content .content-slide .container-slider .slider .slider-item-text {
+  body main .container-about-advantages .advantages .content .content-slide .container-slider .slider .slider-item-text {
     font-size: 1.5rem;
   }
 }
-body main .advantages .content .content-slide .container-slider .slider .container-icon-top {
+body main .container-about-advantages .advantages .content .content-slide .container-slider .slider .container-icon-top {
   padding: 16px;
   border-radius: 12px;
   width: 102px;
@@ -869,18 +904,18 @@ body main .advantages .content .content-slide .container-slider .slider .contain
   background-color: white;
 }
 @media only screen and (max-width: 769px) {
-  body main .advantages .content .content-slide .container-slider .slider .container-icon-top {
+  body main .container-about-advantages .advantages .content .content-slide .container-slider .slider .container-icon-top {
     left: -9%;
     top: -20%;
   }
 }
 @media only screen and (min-width: 770px) {
-  body main .advantages .content .content-slide .container-slider .slider .container-icon-top {
+  body main .container-about-advantages .advantages .content .content-slide .container-slider .slider .container-icon-top {
     top: -20%;
     left: -15%;
   }
 }
-body main .advantages .content .content-slide .container-slider .slider .container-icons-bottom {
+body main .container-about-advantages .advantages .content .content-slide .container-slider .slider .container-icons-bottom {
   padding: 24px 32px;
   border-radius: 12px;
   gap: 16px;
@@ -889,28 +924,28 @@ body main .advantages .content .content-slide .container-slider .slider .contain
   display: inline-flex;
 }
 @media only screen and (max-width: 769px) {
-  body main .advantages .content .content-slide .container-slider .slider .container-icons-bottom {
+  body main .container-about-advantages .advantages .content .content-slide .container-slider .slider .container-icons-bottom {
     bottom: -10%;
     right: -12%;
   }
 }
 @media only screen and (min-width: 770px) {
-  body main .advantages .content .content-slide .container-slider .slider .container-icons-bottom {
+  body main .container-about-advantages .advantages .content .content-slide .container-slider .slider .container-icons-bottom {
     bottom: -10%;
     right: -18%;
   }
 }
-body main .advantages .content .content-slide .container-slider .slider .container-icons-bottom .container-arrow-before,
-body main .advantages .content .content-slide .container-slider .slider .container-icons-bottom .container-arrow-next {
+body main .container-about-advantages .advantages .content .content-slide .container-slider .slider .container-icons-bottom .container-arrow-before,
+body main .container-about-advantages .advantages .content .content-slide .container-slider .slider .container-icons-bottom .container-arrow-next {
   width: 8px;
   height: 8px;
   cursor: pointer;
 }
-body main .advantages .content .content-slide .container-slider .slider .container-icons-bottom .container-separation {
+body main .container-about-advantages .advantages .content .content-slide .container-slider .slider .container-icons-bottom .container-separation {
   width: 1px;
   height: 8px;
 }
-body main .advantages .content .content-slide .number-slider {
+body main .container-about-advantages .advantages .content .content-slide .number-slider {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   line-height: 111%;
@@ -921,13 +956,13 @@ body main .advantages .content .content-slide .number-slider {
   margin-top: 10px;
 }
 @media only screen and (max-width: 480px) {
-  body main .advantages .content .content-slide .number-slider {
+  body main .container-about-advantages .advantages .content .content-slide .number-slider {
     margin-left: 36px;
     margin-top: 10px;
   }
 }
 @media only screen and (max-width: 769px) {
-  body main .advantages .content .content-slide .number-slider {
+  body main .container-about-advantages .advantages .content .content-slide .number-slider {
     font-size: 0.563rem;
     margin-bottom: 47px;
     width: 100%;
@@ -935,48 +970,66 @@ body main .advantages .content .content-slide .number-slider {
   }
 }
 @media only screen and (min-width: 770px) {
-  body main .advantages .content .content-slide .number-slider {
+  body main .container-about-advantages .advantages .content .content-slide .number-slider {
     font-size: 0.625rem;
     margin-bottom: 56px;
   }
 }
-body main .advantages .content .content-slide .advantages-cta {
+body main .container-about-advantages .advantages .content .content-slide .advantages-cta {
   background-color: #4fa67c;
 }
-body main .advantages .content .illustration-laptop {
+body main .container-about-advantages .advantages .content .illustration-laptop {
   flex: 1;
 }
 @media only screen and (max-width: 769px) {
-  body main .advantages .content .illustration-laptop {
+  body main .container-about-advantages .advantages .content .illustration-laptop {
     display: none;
   }
 }
 @media only screen and (min-width: 770px) and (max-width: 1024px) {
-  body main .advantages .content .illustration-laptop {
+  body main .container-about-advantages .advantages .content .illustration-laptop {
     max-width: 445px;
     max-height: 529px;
   }
 }
 @media only screen and (min-width: 1025px) {
-  body main .advantages .content .illustration-laptop {
+  body main .container-about-advantages .advantages .content .illustration-laptop {
     max-width: 505px;
     max-height: 529px;
   }
 }
 @media only screen and (max-width: 480px) {
-  body main .advantages .content .illustration-mobile {
+  body main .container-about-advantages .advantages .content .illustration-mobile {
     padding: 60px 24px;
     width: 275px;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  body main .advantages .content .illustration-mobile {
+  body main .container-about-advantages .advantages .content .illustration-mobile {
     padding: 60px 24px;
     width: 475px;
   }
 }
 @media only screen and (min-width: 769px) {
-  body main .advantages .content .illustration-mobile {
+  body main .container-about-advantages .advantages .content .illustration-mobile {
     display: none;
+  }
+}
+body main .container-about-advantages .advantages .container-circle-background {
+  position: absolute;
+  width: 1664px;
+  height: 1664px;
+  left: 57%;
+}
+body main .container-about-advantages .advantages .container-circle-background img {
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  body main .container-about-advantages .advantages .container-circle-background {
+    width: 722px;
+    height: 722px;
+    bottom: -105%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-75%);
   }
 }/*# sourceMappingURL=style.css.map */
