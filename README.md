@@ -5,11 +5,11 @@
 El proyecto lo realicé con html, sass y javascript.
 
 
-## ✨ To do
+## ✨ To do :
 Ajouter des animations :
 - Scroll Reveal dans chaque section
-<br>
 - Illustration en section avantages
+<br>
 - Fixer scroll dans le menu mobile
 - Améliorer le desing responsive
 - Améliorez paddings, margins, et responsive design la fonction cal().
