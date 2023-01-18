@@ -812,7 +812,7 @@ body main .container-about-advantages .advantages .content .content-slide {
 }
 @media only screen and (min-width: 770px) {
   body main .container-about-advantages .advantages .content .content-slide {
-    padding-left: 90px;
+    padding-left: 10%;
   }
 }
 body main .container-about-advantages .advantages .content .content-slide .content-title {
@@ -851,7 +851,7 @@ body main .container-about-advantages .advantages .content .content-slide .conta
   border-radius: 12px;
   min-width: 222px;
   position: relative;
-  margin-top: 80px;
+  margin-top: 85px;
   display: flex;
   justify-content: center;
 }
