@@ -6,7 +6,7 @@ El proyecto lo realicé con html, sass y javascript.
 
 
 ## ✨ To do :
-Ajouter des animations :
+- Ajouter des animations :
 - Scroll Reveal dans chaque section
 - Illustration en section avantages
 <br>
