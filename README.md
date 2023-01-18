@@ -8,6 +8,7 @@ El proyecto lo realicé con html, sass y javascript.
 ## ✨ To do
 Ajouter des animations :
 - Scroll Reveal dans chaque section
+<br>
 - Illustration en section avantages
 - Fixer scroll dans le menu mobile
 - Améliorer le desing responsive
