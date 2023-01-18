@@ -6,9 +6,7 @@ El proyecto lo realicé con html, sass y javascript.
 
 
 ## ✨ To do :
-- Ajouter des animations :
-- Scroll Reveal dans chaque section
-- Illustration en section avantages
+- Ajouter des animations : Scroll Reveal dans chaque section et illustration en section avantages.
 <br>
 - Fixer scroll dans le menu mobile
 <br>
