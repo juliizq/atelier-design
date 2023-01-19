@@ -4,7 +4,7 @@
 
 <h2> Le projet a été réalisé avec html, sass et javascript. </h2>
 
-# ✨ To do : 
+✨ To do : 
 
 - Ajouter des animations : Illustration en section avantages.
 - Fixer scroll dans le menu mobile.
