@@ -2,7 +2,7 @@
 
 ![Design preview ](./assets/atelier-design-test-preview.png)
 
-<h2> Le projet a été réalisé avec html, sass et javascript. </h2>
+<h2> Le projet a été réalisé avec html, sass, javascript et scrollreveal. </h2>
 
 ✨ To do : 
 
