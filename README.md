@@ -4,7 +4,7 @@
 
 Le projet a été réalisé avec html, sass et javascript.
 
-<h4> ✨ To do : </h4>
+<h3> ✨ To do : </h3>
 - Ajouter des animations : Illustration en section avantages.
 - Fixer scroll dans le menu mobile.
 - Améliorez paddings, margins, et responsive design.
