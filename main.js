@@ -26,7 +26,7 @@ const reveal = {
   scale: 1,
   distance: "30px",
   easing: "ease-out",
-  interval: 200,
+  interval: 300,
 };
 
 const revealAdvantages = {
